@@ -10,7 +10,7 @@ namespace MVCPrueba.Models
     {
         public Materia()
         {
-            this.Cursos = new HashSet<Curso>();
+            
             this.Alumnos_Materias = new HashSet<Alumno_Materia>();
             this.Docentes = new HashSet<Docente>();
         }
@@ -20,7 +20,7 @@ namespace MVCPrueba.Models
         public string Descripcion { get; set; }
 
         
-        public virtual ICollection<Curso> Cursos { get; set; }
+       
         
         public virtual ICollection<Alumno_Materia> Alumnos_Materias { get; set; }
         

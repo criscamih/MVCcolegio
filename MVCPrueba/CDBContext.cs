@@ -21,8 +21,6 @@ public class CDBContext : DbContext
 
     public System.Data.Entity.DbSet<MVCPrueba.Models.Materia> Materias { get; set; }
 
-    public System.Data.Entity.DbSet<MVCPrueba.Models.Curso> Cursoes { get; set; }
-
     public System.Data.Entity.DbSet<MVCPrueba.Models.Docente> Docentes { get; set; }
 
     public System.Data.Entity.DbSet<MVCPrueba.Models.Alumno_Materia> Alumno_Materia { get; set; }

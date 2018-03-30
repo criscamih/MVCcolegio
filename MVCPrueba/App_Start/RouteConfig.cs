@@ -16,7 +16,7 @@ namespace MVCPrueba
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Alumnos", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Alumnoes", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

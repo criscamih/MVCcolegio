@@ -163,7 +163,6 @@
     <Compile Include="CDBContext.cs" />
     <Compile Include="Controllers\AlumnoesController.cs" />
     <Compile Include="Controllers\Alumno_MateriaController.cs" />
-    <Compile Include="Controllers\CursosController.cs" />
     <Compile Include="Controllers\DocentesController.cs" />
     <Compile Include="Controllers\MateriasController.cs" />
     <Compile Include="Global.asax.cs">
@@ -184,7 +183,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Alumno.cs" />
     <Compile Include="Models\Alumno_Materia.cs" />
-    <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\Docente.cs" />
     <Compile Include="Models\DocenteMateriaDetalle.cs" />
     <Compile Include="Models\Materia.cs" />
@@ -227,11 +225,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Cursos\Create.cshtml" />
-    <Content Include="Views\Cursos\Delete.cshtml" />
-    <Content Include="Views\Cursos\Details.cshtml" />
-    <Content Include="Views\Cursos\Edit.cshtml" />
-    <Content Include="Views\Cursos\Index.cshtml" />
     <Content Include="Views\Docentes\Create.cshtml" />
     <Content Include="Views\Docentes\Delete.cshtml" />
     <Content Include="Views\Docentes\Details.cshtml" />
