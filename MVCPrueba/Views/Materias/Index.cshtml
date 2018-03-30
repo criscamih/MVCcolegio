@@ -4,30 +4,38 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Materias</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Descripcion)
-        </th>
-        <th></th>
-    </tr>
+<table class="table table-striped">
+    <thead >
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descripcion)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id_materia }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id_materia }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id_materia })
-        </td>
-    </tr>
+
+        <tr>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id_materia }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id_materia }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id_materia })
+            </td>
+        </tr>
+
 }
-
+    </tbody>
 </table>
