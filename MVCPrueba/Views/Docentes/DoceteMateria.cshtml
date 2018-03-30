@@ -1,0 +1,79 @@
+﻿@model MVCPrueba.Models.Docente
+
+@{
+    /**/
+
+    ViewBag.Title = "DoceteMateria";
+    List<MVCPrueba.Models.Materia> materias = ViewBag.Materias;
+}
+
+<h2>Docete y Asignaturas</h2>
+@using (Html.BeginForm("Guardar", "Docentes", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Code_Docente)
+<div class="form-horizontal">
+    <form class="form-group">
+        @Html.LabelFor(x => x.Nombre_Docente)
+        @Html.TextBoxFor(x => x.Nombre_Docente, new { @class = "form-control" })
+    </form>
+
+    <div class="form-group">
+        @Html.Label("Docentes", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("docentes", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Nombre_Docente, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div>
+        <ul class="list-group">
+            @foreach (var materia in materias)
+            {
+                var estado = false;
+                foreach (var ma in Model.Materias)
+                {
+
+                    if (materia.Id_materia == ma.Id_materia)
+                    {
+                        estado = true;
+
+                        break;
+                    }
+                }
+
+                <li class="list-group-item">
+                    <label>
+                        <input type="checkbox" @(estado ? "checked" : "") name="materias" value="@materia.Id_materia" />
+                        @materia.Descripcion
+                    </label>
+                </li>
+
+            }
+
+        </ul>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+
+   
+    
+
+
+
+    
+
+}
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Code_Docente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
