@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.DNI)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Code_Alumno }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Code_Alumno }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Code_Alumno })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Code_Alumno },new {@class="btn btn-primary" }) 
+            @Html.ActionLink("Details", "Details", new { id=item.Code_Alumno }, new { @class = "btn btn-success" }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.Code_Alumno }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
